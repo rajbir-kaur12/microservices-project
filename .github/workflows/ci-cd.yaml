@@ -57,11 +57,10 @@ jobs:
       with:
         version: 'latest'
 
-    - name: Deploy to Kubernetes cluster
-      run: |
-        kubectl apply -f k8s/configmaps.yaml
-        kubectl apply -f k8s/secrets.yaml
-        kubectl apply -f k8s/user-service-deployment.yaml
-        kubectl apply -f k8s/product-service-deployment.yaml
-        kubectl rollout status deployment/user-service
-        kubectl rollout status deployment/product-service
+    # - name: Deploy to Kubernetes cluster
+    #   run: |
+    #     kubectl apply -f k8s/configmaps.yaml
+    #     kubectl apply -f k8s/secrets.yaml
+    #     kubectl set image deployment/user-service user-service=yourdockerhubusername/user-service:latest
+    #     kubectl set image deployment/product-service product-service=yourdockerhubusername/product-service:latest
+
