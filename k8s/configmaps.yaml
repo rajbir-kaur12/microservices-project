@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: user-service-config
+data:
+  LOG_LEVEL: "debug"
+  FEATURE_FLAG: "true"
+  EXTERNAL_API_URL: "https://api.example.com"
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: product-service-config
+data:
+  LOG_LEVEL: "info"
+  FEATURE_FLAG: "false"
+  PRICE_API_URL: "https://prices.example.com"
