@@ -7,6 +7,15 @@ app.use(bodyParser.json());
 let products = [];
 let idCounter = 1;
 
+// Collect default system metrics (CPU, memory, etc.)
+// client.collectDefaultMetrics();
+
+// Expose /metrics endpoint for Prometheus to scrape
+app.get('/metrics', async (req, res) => {
+  res.set('Content-Type', client.register.contentType);
+  res.end(await client.register.metrics());
+});
+
 // Health check endpoint
 app.get('/health', (req, res) => {
   res.json({ status: 'Product Service is healthy' });
