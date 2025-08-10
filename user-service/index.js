@@ -58,7 +58,7 @@ app.post('/users', (req, res) => {
   res.status(201).json(newUser);
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 6000;
 app.listen(PORT, () => {
   console.log(`User Service running on port ${PORT}`);
 });
