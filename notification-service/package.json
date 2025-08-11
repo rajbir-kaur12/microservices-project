@@ -2,9 +2,9 @@
   "name": "notification-service",
   "version": "1.0.0",
   "description": "Handles user notifications",
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "node index.js",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage"

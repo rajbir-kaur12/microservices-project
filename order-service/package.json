@@ -2,9 +2,9 @@
   "name": "order-service",
   "version": "1.0.0",
   "description": "Handles order-related operations",
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "node index.js",
     "test": "jest"
   },
   "dependencies": {

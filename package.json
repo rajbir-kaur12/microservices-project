@@ -4,6 +4,6 @@
     "supertest": "^7.1.4"
   },
   "scripts": {
-  "e2e-test": "jest e2e-tests/e2e.test.js"
-} 
+    "e2e-test": "jest e2e-tests/e2e.test.js"
+  }
 }
